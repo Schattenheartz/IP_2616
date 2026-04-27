@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático(ATM)</title>
+    <!-- Enlace al archivo CSS para estilos -->
+    <link rel="stylesheet" href="../CSS/cajero.css">
+</head>
+<body>
+    <!-- Contenedor principal del Cajero Automático -->
+    <div class="cajero">
+        <h1>Cajero Automático</h1>
+        <!-- Campo de entrada para el monto a retirar -->
+        <input type="number" id="monto" placeholder="Ingresar Monto a Retirar">
+        <button onclick="retirar()"> <!-- Botón para iniciar el proceso de retiro -->
+            Retirar
+        </button>
+        <button onclick="limpiar()" class="btn-limpiar"> <!-- Botón para limpiar los resultados -->
+            Limpiar
+        </button>
+        <!-- Sección para mostrar el resultado del retiro -->
+        <div class="resultado">
+            <div>Retiro Exitoso</div>
+            <div class="monto"> <!-- Monto final a retirar --> 
+                S/ <span id="montoFinal">0</span> 
+            </div>
+            <!-- Detalle de los billetes entregados -->
+            <div id="detalleBilletes">
+                <div>Billetes de 100: <span id="b100">0</span></div>
+                <div>Billetes de 50: <span id="b50">0</span></div>
+                <div>Billetes de 20: <span id="b20">0</span></div>
+                <div>Billetes de 10: <span id="b10">0</span></div>
+            </div>
+            <!-- Total de billetes entregados -->
+            <div class="total">
+                Total de Billetes: <span id="totalBilletes">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript para la lógica del cajero -->
+    <script src="../JS/cajero.js"></script>
+</body>
+</html>
