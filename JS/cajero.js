@@ -6,6 +6,9 @@ function retirar() {
         return;
     }
 
+    //Console
+    console.log("Monto ingresado: " + monto);
+
     // Guardar el monto original para mostrarlo después
     let original = monto;
     // Cálculo de billetes
@@ -22,6 +25,13 @@ function retirar() {
     let b10 = Math.floor(monto / 10);
     // Cantidad total de billetes entregados
     let totalBilletes = b100 + b50 + b20 + b10;
+
+    // Console 
+    console.log("Billetes de 100: " + b100);
+    console.log("Billetes de 50: " + b50);
+    console.log("Billetes de 20: " + b20);
+    console.log("Billetes de 10: " + b10);
+    console.log("Total de billetes entregados: " + totalBilletes);
 
     // Monto Retirado
     document.getElementById("montoFinal").innerText = original;
