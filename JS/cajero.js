@@ -1,9 +1,11 @@
 /* Función para retirar dinero */
 function retirar() {
     let monto = parseInt(document.getElementById("monto").value);
-    if (isNaN(monto) || monto <= 0) {
-        alert("Ingrese un Monto Válido");
-        return;
+
+    // Verifica que el monto sea un número válido, positivo y múltiplo de 10
+    if (isNaN(monto) || monto <= 0 || monto % 10 !== 0) {
+    alert("Monto no válido. Por favor, ingrese una cantidad que termine en cero (ejemplo: 20, 50, 100).");
+    return;
     }
 
     //Console
