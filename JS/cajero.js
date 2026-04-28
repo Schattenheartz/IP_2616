@@ -35,6 +35,8 @@ function retirar() {
     console.log("Billetes de 10: " + b10);
     console.log("Total de billetes entregados: " + totalBilletes);
 
+    // Mostrar el contenedor de resultado principal
+    document.querySelector(".resultado").style.display = "block";
     // Monto Retirado
     document.getElementById("montoFinal").innerText = original;
     // Total billetes
@@ -57,6 +59,8 @@ function limpiar() {
     document.getElementById("montoFinal").innerText = "0";
     // Reset total billetes
     document.getElementById("totalBilletes").innerText = "0";
+    // Ocultar el contenedor de resultado principal
+    document.querySelector(".resultado").style.display = "none";
     // Reset billetes
     document.getElementById("b100").innerText = "0";
     document.getElementById("b50").innerText = "0";
